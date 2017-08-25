@@ -1,3 +1,50 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      margin: 0;
+    }
+    .container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+    }
+    input:active, input:focus, textarea:active, textarea:focus {
+      border: 1px solid gray;
+      border-radius: 30px;
+    }
+    input {
+      outline-style: none;
+      border: 1px solid black;
+      border-radius: 10px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      line-height: 43px;
+      padding: 0 0.75em;
+      width: 400px;
+      -webkit-transition: all 0.35s ease-in;
+    }
+    textarea {
+      border: 1px solid black;
+      padding: 0.5em;
+      width: 100%;
+      -webkit-transition: all 0.35s ease-in;
+    }
+
+    .btn {
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid black;
+      cursor: pointer;
+      display: inline-block;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      line-height: 43px;
+      padding: 0 0.75em;
+      text-align: center;
+      -webkit-transition: all 0.35s ease-in;
+    }
