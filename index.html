@@ -21,7 +21,7 @@
 
   <div class="container">
   <input id="inputtext" type="text">
-  <button id="enter" class="btn">enter</button>
+  <button id="enter" class="enterbtn"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 </div>
 
   <!-- jquery 3.2.1 -->
@@ -31,6 +31,19 @@
     crossorigin="anonymous"></script>
     <!-- main js -->
   <script src="js/js.js"></script>
+  <script>
+
+  $( "#inputtext" ).focus(function() {
+    $(".enterbtn").css("padding", ".4em 1.3em");
+    $(".enterbtn").css("background-color", "#efe");
+    $(".enterbtn").css("box-shadow", "0px 0px 5px -1px rgba(0,0,0,0.75)");
+});
+$( "#inputtext" ).focusout(function() {
+  $(".enterbtn").css("padding", "0 .9em");
+  $(".enterbtn").css("background-color", "#fff");
+  $(".enterbtn").css("box-shadow", "none");
+});
+</script>
 </body>
 
 </html>
