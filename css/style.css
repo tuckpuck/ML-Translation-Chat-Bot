@@ -9,8 +9,14 @@ body {
   background-color: #eee;
 }
 
+.title {
+  font-size: 70px;
+  padding-top: 80px;
+  font-family: 'Aldrich', sans-serif;
+}
+
 .inputcontainer {
-  /*display: inline-flex;*/
+  z-index: 100;
   margin-left: 10px;
   position: fixed;
   top: 50%;
@@ -18,7 +24,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
 }
 
-.responsecontainer{
+.responsecontainer {
   display: block;
 }
 
@@ -38,7 +44,7 @@ input {
   font-size: 16px;
   line-height: 43px;
   padding: 0em 0.75em;
-  width: 450px;
+  width: 550px;
   -webkit-transition: all 0.35s ease-in;
   -webkit-box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.75);
@@ -77,7 +83,8 @@ textarea {
   position: absolute !important;
   top: 53% !important;
   width: 100%;
-    margin-left: 10px;
+  margin-left: 10px;
+  margin-top: -90px;
 }
 
 .chat-box {
@@ -90,10 +97,12 @@ textarea {
   margin: 0 auto;
   float: none;
 }
+
 .chat-box ul {
   list-style-type: none;
   padding: 0;
 }
+
 .chat-box ul:target {
   display: block;
 }
@@ -101,23 +110,25 @@ textarea {
 .chat-box ul li {
   margin: 10px 0px;
 }
+
 .chat-box ul li .bot {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
+
 .chat-box ul li .human {
   display: flex;
   align-items: center;
 }
 
-.chat-box ul li > div .text {
+.chat-box ul li>div .text {
   background-color: #fff;
   display: inline-block;
   padding: 15px 20px;
   max-width: 300px;
   border: 1px solid gray;
-  margin-left: -54px;
+  margin-left: -104px;
   border-radius: 20px 0 20px 20px;
   z-index: 10;
   position: relative;
@@ -129,39 +140,75 @@ textarea {
 }
 
 .chat-box ul li .bot .text {
-   margin-right: 24px;
+  margin-right: -26px;
 }
+
 
 /* XS Size*/
 
 @media (max-width: 34em) {}
 
+
 /* S Size */
 
 @media (min-width: 34em) and (max-width: 48em) {}
 
-/* XS and S Size - Mobile*/
 
-@media (max-width: 900px) {
+/* XS and S Size - Mobile*/
+@media (max-width: 1300px) {
   .inputcontainer {
     display: inline-flex;
   }
 }
 
+
+@media (max-width: 1000px) {
+  input {
+    width: 450px;
+  }
+  .chat-box ul li>div .text {
+    margin-left: -54px;
+  }
+  .chat-box ul li .bot .text {
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 40px;
+    padding-top: 80px;
+    font-family: 'Aldrich', sans-serif;
+  }
+  input {
+    width: 300px;
+  }
+  .chat-box ul li>div .text {
+    margin-left: 0px;
+  }
+  .chat-box ul li .bot .text {
+    margin-right: 40px;
+  }
+}
+
+
 /* Medium - Tablet Size */
 
-
 @media (min-width: 48em) and (max-width: 62em) {}
+
 
 /* Large */
 
 @media (min-width: 62em) and (max-width: 75em) {}
 
+
 /* Full Size - Extra Large Desktop and Up */
 
 @media (min-width: 75em) {}
 
+
 /*///////////////////////////////////////////////////////*/
+
 
 /* Everything Under Small Size */
 
@@ -172,13 +219,16 @@ textarea {
 
 @media (max-width: 48em) {}
 
+
 /* Everything Higher Than Medium Tablet Size */
 
 @media (min-width: 48em) {}
 
+
 /* Everything Under Large Size */
 
 @media (max-width: 62em) {}
+
 
 /* Everything Under Extra Large Size */
 
