@@ -81,14 +81,12 @@ textarea {
 
 .chat-boxposition {
   position: absolute !important;
-  top: 53% !important;
+  top: 52.8% !important;
   width: 100%;
   margin-left: 10px;
-  margin-top: -90px;
 }
 
 .chat-box {
-  margin-top: 50%;
   position: relative;
   font-size: 16px;
   border-radius: 0 10px 10px 0;
@@ -128,7 +126,7 @@ textarea {
   padding: 15px 20px;
   max-width: 300px;
   border: 1px solid gray;
-  margin-left: -104px;
+  margin-left: -79px;
   border-radius: 20px 0 20px 20px;
   z-index: 10;
   position: relative;
@@ -140,7 +138,19 @@ textarea {
 }
 
 .chat-box ul li .bot .text {
-  margin-right: -26px;
+  margin-right: -51px;
+}
+
+.cleardialogue {
+  position: fixed;
+  bottom: 0px;
+  border: 1px solid gray;
+  background-color: #fff;
+  padding: 5px 20px 0px;
+  border-radius: 20px 20px 0px 0px;
+  font-size: 12px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
 }
 
 
@@ -154,28 +164,29 @@ textarea {
 @media (min-width: 34em) and (max-width: 48em) {}
 
 @media (max-width: 1250px) {
-    input {
-      margin-right: 2px;
-    }
+  input {
+    margin-right: 2px;
   }
+}
+
 
 /* XS and S Size - Mobile*/
+
 @media (max-width: 1300px) {
   .inputcontainer {
     display: inline-flex;
   }
 }
 
-
 @media (max-width: 1000px) {
   input {
     width: 450px;
   }
   .chat-box ul li>div .text {
-    margin-left: -54px;
+    margin-left: -29px;
   }
   .chat-box ul li .bot .text {
-    margin-right: 24px;
+    margin-right: -1px;
   }
 }
 

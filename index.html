@@ -15,104 +15,106 @@
   <!--aldrich font-->
   <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
   <!--font awesome-->
-  <link  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
-<div class="container-fluid text-center">
-  <div class="text-xs-center title">Translation Chat Bot</div>
-  <div class="inputcontainer text-xs-center">
-  <input id="inputtext" type="text">
-  <button id="enter" class="enterbtn"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-</div>
+  <div class="container-fluid text-center">
+    <div class="text-xs-center title">AI Translation Chat Bot</div>
+    <div class="inputcontainer text-xs-center">
+      <input id="inputtext" type="text">
+      <button id="enter" class="enterbtn"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+    </div>
 
-<div class="chat-boxposition">
-<div class='chat-box text-xs-center col-xs-12'>
-		<ul id='chat_ul'>
-			<li><div class='title'></div></li>
-			<li>
-				<div class='bot'>
-						<div class='text'>
-								Welcome! Type something.
-						</div>
-				</div>
-			</li>
-			<li>
-				<div class='human'>
-					<div class='text'>
-							What is hola mundo in english?
-					</div>
-				</div>
-			</li>
-		</ul>
-</div>
-</div>
-
-</div>
+    <div class="chat-boxposition">
+      <div class='chat-box text-xs-center col-xs-12'>
+        <ul id='chat_ul'>
+          <li>
+            <div class='bot'>
+              <div class='text'>
+                Welcome! Type something.
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class='human'>
+              <div class='text'>
+                What is hola mundo in english?
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button class="cleardialogue">clear chat</button>
+<!-- End Container -->
+  </div>
   <!-- jquery 3.2.1 -->
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <!-- main js -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- main js -->
   <script src="js/js.js"></script>
   <script>
+    $("#inputtext").focus(function() {
+      $(".enterbtn").css({
+        '-webkit-transform': 'scale(1.1)',
+        '-moz-transform': 'scale(1.1)',
+        '-ms-transform': 'scale(1.1)',
+        '-o-transform': 'scale(1.1)',
+        'transform': 'scale(1.1)'
+      });
+      $(".enterbtn").css("background-color", "#efe");
+      $(".enterbtn").css("box-shadow", "0px 0px 10px -2px rgba(0,0,0,0.75)");
+    });
+    $("#inputtext").focusout(function() {
+      $(".enterbtn").css({
+        '-webkit-transform': 'scale(1.0)',
+        '-moz-transform': 'scale(1.0)',
+        '-ms-transform': 'scale(1.0)',
+        '-o-transform': 'scale(1.0)',
+        'transform': 'scale(1.0)'
+      });
+      $(".enterbtn").css("background-color", "#fff");
+      $(".enterbtn").css("box-shadow", "none");
+    });
+  </script>
 
-  $( "#inputtext" ).focus(function() {
-    $(".enterbtn").css({
-  '-webkit-transform' : 'scale(1.1)',
-  '-moz-transform'    : 'scale(1.1)',
-  '-ms-transform'     : 'scale(1.1)',
-  '-o-transform'      : 'scale(1.1)',
-  'transform'         : 'scale(1.1)'
-});
-    $(".enterbtn").css("background-color", "#efe");
-    $(".enterbtn").css("box-shadow", "0px 0px 10px -2px rgba(0,0,0,0.75)");
-});
-$( "#inputtext" ).focusout(function() {
-  $(".enterbtn").css({
-'-webkit-transform' : 'scale(1.0)',
-'-moz-transform'    : 'scale(1.0)',
-'-ms-transform'     : 'scale(1.0)',
-'-o-transform'      : 'scale(1.0)',
-'transform'         : 'scale(1.0)'
-});
-  $(".enterbtn").css("background-color", "#fff");
-  $(".enterbtn").css("box-shadow", "none");
-});
-</script>
-
-<script>
-$(".enterbtn").click(function() {
-  var text = $("#inputtext").val();
-  if (text !== "") {
-    var fulldialogbox = $('<li>' + '<div class="human">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
-    fulldialogbox.find(".text").text(text);
-    $("#chat_ul").append(fulldialogbox);
-    $("#inputtext").val("");
-  } else {
-    return;
-  }
-});
-
-$( "#inputtext" ).focus(function() {
-$(document).keydown(function(e) {
-    if(e.which == 13) {
+  <script>
+    $(".enterbtn").click(function() {
       var text = $("#inputtext").val();
       if (text !== "") {
-      var fulldialogbox = $('<li>' + '<div class="human">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
-      fulldialogbox.find(".text").text(text);
-      $("#chat_ul").append(fulldialogbox);
-      $("#inputtext").val("");
-    } else {
-      return;
-    }
-    }
-  });
-});
+        var fulldialogbox = $('<li>' + '<div class="human">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
+        fulldialogbox.find(".text").text(text);
+        $("#chat_ul").append(fulldialogbox);
+        $("#inputtext").val("");
+      } else {
+        return;
+      }
+    });
 
-</script>
+    $("#inputtext").focus(function() {
+      $(document).keydown(function(e) {
+        if (e.which == 13) {
+          var text = $("#inputtext").val();
+          if (text !== "") {
+            var fulldialogbox = $('<li>' + '<div class="human">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
+            fulldialogbox.find(".text").text(text);
+            $("#chat_ul").append(fulldialogbox);
+            $("#inputtext").val("");
+          } else {
+            return;
+          }
+        }
+      });
+    });
+  </script>
+
+  <script>
+  $(".cleardialogue").click(function() {
+    $("#chat_ul").empty();
+  });
+  </script>
 </body>
 
 </html>
