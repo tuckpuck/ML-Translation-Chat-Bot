@@ -10,7 +10,8 @@ body {
 }
 
 .inputcontainer {
-  display: inline-flex;
+  /*display: inline-flex;*/
+  margin-left: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -36,8 +37,8 @@ input {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 43px;
-  padding: 0 0.75em;
-  width: 400px;
+  padding: 0em 0.75em;
+  width: 450px;
   -webkit-transition: all 0.35s ease-in;
   -webkit-box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.75);
@@ -72,17 +73,11 @@ textarea {
   box-shadow: 10px 10px 10px 2em rgba(#efe, 1);
 }
 
-/*.col-xs-6 {
-    width: 40% !important;
-}
-
-.col-xs-offset-3 {
-  margin-left: 30% !important;
-}*/
 .chat-boxposition {
   position: absolute !important;
   top: 53% !important;
   width: 100%;
+    margin-left: 10px;
 }
 
 .chat-box {
@@ -91,14 +86,13 @@ textarea {
   font-size: 16px;
   border-radius: 0 10px 10px 0;
   max-width: 450px;
-  background-color: blue;
+  background-color: #eee;
   margin: 0 auto;
   float: none;
 }
 .chat-box ul {
   list-style-type: none;
   padding: 0;
-  /*display: none;*/
 }
 .chat-box ul:target {
   display: block;
@@ -123,23 +117,69 @@ textarea {
   padding: 15px 20px;
   max-width: 300px;
   border: 1px solid gray;
-  margin-left: -15px;
+  margin-left: -54px;
   border-radius: 20px 0 20px 20px;
   z-index: 10;
   position: relative;
 }
 
 .chat-box ul li .you .text div {
-  /*margin-left: 6px;*/
   border-radius: 0 20px 20px 20px;
   text-align: left;
 }
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) {}
+.chat-box ul li .me .text div {
+   margin-right: 24px;
+}
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {}
+/* XS Size*/
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {}
+@media (max-width: 34em) {}
+
+/* S Size */
+
+@media (min-width: 34em) and (max-width: 48em) {}
+
+/* XS and S Size - Mobile*/
+
+@media (max-width: 900px) {
+  .inputcontainer {
+    display: inline-flex;
+  }
+}
+
+/* Medium - Tablet Size */
+
+
+@media (min-width: 48em) and (max-width: 62em) {}
+
+/* Large */
+
+@media (min-width: 62em) and (max-width: 75em) {}
+
+/* Full Size - Extra Large Desktop and Up */
+
+@media (min-width: 75em) {}
+
+/*///////////////////////////////////////////////////////*/
+
+/* Everything Under Small Size */
+
+@media (max-width: 34em) {}
+
+
+/* Everything Under Medium Tablet Size */
+
+@media (max-width: 48em) {}
+
+/* Everything Higher Than Medium Tablet Size */
+
+@media (min-width: 48em) {}
+
+/* Everything Under Large Size */
+
+@media (max-width: 62em) {}
+
+/* Everything Under Extra Large Size */
+
+@media (max-width: 75em) {}
