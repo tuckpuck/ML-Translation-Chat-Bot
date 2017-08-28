@@ -8,22 +8,55 @@
   <meta name="author" content="Tucker Triggs, tucker.triggs@yahoo.com">
   <!--mobile responsive-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- css -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
   <!--bootstrap 3.3.7-->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!--roboto font-->
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic' rel='stylesheet' type='text/css'>
   <!--font awesome-->
   <link  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
-  <div class="container">
+<div class="container-fluid">
+  <div class="inputcontainer text-xs-center">
   <input id="inputtext" type="text">
   <button id="enter" class="enterbtn"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 </div>
 
+<div class='chat-box text-xs-center col-xs-6 col-xs-offset-3 col-md-12'>
+		<ul id='user_1'>
+			<li><div class='title'></div></li>
+			<li>
+				<div class='me'>
+					<div>
+						<!-- <div class='name'>Chat Bot</div> -->
+						<!-- <div class='img'></div> -->
+						<div class='text'>
+							<div>
+								Welcome! Type something.
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class='you'>
+				<div>
+					<!-- <div class='img'></div> -->
+					<!-- <div class='name'>Tucker</div> -->
+					<div class='text'>
+						<div>
+							What is hola mundo in english?
+						</div>
+					</div>
+				</div>
+				</div>
+			</li>
+		</ul>
+</div>
+
+</div>
   <!-- jquery 3.2.1 -->
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
