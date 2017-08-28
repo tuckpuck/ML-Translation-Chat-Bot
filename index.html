@@ -26,32 +26,20 @@
 
 <div class="chat-boxposition">
 <div class='chat-box text-xs-center col-xs-12'>
-		<ul id='user_1'>
+		<ul id='chat_ul'>
 			<li><div class='title'></div></li>
 			<li>
-				<div class='me'>
-					<div>
-						<!-- <div class='name'>Chat Bot</div> -->
-						<!-- <div class='img'></div> -->
+				<div class='bot'>
 						<div class='text'>
-							<div>
 								Welcome! Type something.
-							</div>
 						</div>
-					</div>
 				</div>
 			</li>
 			<li>
-				<div class='you'>
-				<div>
-					<!-- <div class='img'></div> -->
-					<!-- <div class='name'>Tucker</div> -->
+				<div class='human'>
 					<div class='text'>
-						<div>
 							What is hola mundo in english?
-						</div>
 					</div>
-				</div>
 				</div>
 			</li>
 		</ul>
@@ -78,6 +66,37 @@ $( "#inputtext" ).focusout(function() {
   $(".enterbtn").css("background-color", "#fff");
   $(".enterbtn").css("box-shadow", "none");
 });
+</script>
+
+<script>
+$(".enterbtn").click(function() {
+  var text = $("#inputtext").val();
+  if (text !== "") {
+    var fulldialogbox = $('<li>' + '<div class="human">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
+    fulldialogbox.find(".text").text(text);
+    $("#chat_ul").append(fulldialogbox);
+    $("#inputtext").val("");
+  } else {
+    return;
+  }
+});
+
+$( "#inputtext" ).focus(function() {
+$(document).keydown(function(e) {
+    if(e.which == 13) {
+      var text = $("#inputtext").val();
+      if (text !== "") {
+      var fulldialogbox = $('<li>' + '<div class="human">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
+      fulldialogbox.find(".text").text(text);
+      $("#chat_ul").append(fulldialogbox);
+      $("#inputtext").val("");
+    } else {
+      return;
+    }
+    }
+  });
+});
+
 </script>
 </body>
 

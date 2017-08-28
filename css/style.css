@@ -101,17 +101,17 @@ textarea {
 .chat-box ul li {
   margin: 10px 0px;
 }
-.chat-box ul li .me {
+.chat-box ul li .bot {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.chat-box ul li .you {
+.chat-box ul li .human {
   display: flex;
   align-items: center;
 }
 
-.chat-box ul li > div .text div {
+.chat-box ul li > div .text {
   background-color: #fff;
   display: inline-block;
   padding: 15px 20px;
@@ -123,12 +123,12 @@ textarea {
   position: relative;
 }
 
-.chat-box ul li .you .text div {
+.chat-box ul li .human .text {
   border-radius: 0 20px 20px 20px;
   text-align: left;
 }
 
-.chat-box ul li .me .text div {
+.chat-box ul li .bot .text {
    margin-right: 24px;
 }
 
