@@ -10,7 +10,7 @@ body {
 }
 
 .inputcontainer {
-  display: block;
+  display: inline-flex;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -72,19 +72,28 @@ textarea {
   box-shadow: 10px 10px 10px 2em rgba(#efe, 1);
 }
 
-.col-xs-6 {
+/*.col-xs-6 {
     width: 40% !important;
 }
 
 .col-xs-offset-3 {
   margin-left: 30% !important;
+}*/
+.chat-boxposition {
+  position: absolute !important;
+  top: 53% !important;
+  width: 100%;
 }
 
 .chat-box {
-  top: 55%;
-  position: absolute;
+  margin-top: 50%;
+  position: relative;
   font-size: 16px;
   border-radius: 0 10px 10px 0;
+  max-width: 450px;
+  background-color: blue;
+  margin: 0 auto;
+  float: none;
 }
 .chat-box ul {
   list-style-type: none;
@@ -94,65 +103,30 @@ textarea {
 .chat-box ul:target {
   display: block;
 }
-.chat-box ul li .title {
-  color: #888;
-  text-align: center;
-  border-bottom: 1px solid #88;
-  margin-bottom: 3px;
+
+.chat-box ul li {
+  margin: 10px 0px;
 }
 .chat-box ul li .me {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 65px;
 }
 .chat-box ul li .you {
   display: flex;
   align-items: center;
 }
-.chat-box ul li > div .img {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background: #fff;
-  border-radius: 50%;
-  margin-bottom: -25px;
-  border: 2px solid #03A9F4;
-  z-index: 100;
-  position: relative;
-}
-.chat-box ul li > div .name {
-  display: inline-block;
-  padding: 5px 50px 5px 20px;
-  margin-top: -20px;
-  margin-right: -350px;
-  background-color: #03A9F4;
-  color: #fff;
-  border-radius: 15px 0 0 0;
-  font-size: 13px;
-  position: relative;
-}
+
 .chat-box ul li > div .text div {
   background-color: #fff;
   display: inline-block;
   padding: 15px 20px;
   max-width: 300px;
-    border: 1px solid gray;
-  /*min-width: 150px;*/
+  border: 1px solid gray;
   margin-left: -15px;
   border-radius: 20px 0 20px 20px;
   z-index: 10;
   position: relative;
-  /*text-align: right;*/
-}
-.chat-box ul li .you .name {
-  padding: 5px 25px 5px 50px;
-  border-radius: 0 15px 0 0;
-}
-
-.chat-box ul li .me .name {
-  padding: 5px 25px 5px 50px;
-  border-radius: 0 15px 0 0;
 }
 
 .chat-box ul li .you .text div {
@@ -160,3 +134,12 @@ textarea {
   border-radius: 0 20px 20px 20px;
   text-align: left;
 }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {}
