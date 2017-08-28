@@ -153,6 +153,11 @@ textarea {
 
 @media (min-width: 34em) and (max-width: 48em) {}
 
+@media (max-width: 1250px) {
+    input {
+      margin-right: 2px;
+    }
+  }
 
 /* XS and S Size - Mobile*/
 @media (max-width: 1300px) {
