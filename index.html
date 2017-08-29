@@ -82,11 +82,13 @@
 
   <script>
     $(".enterbtn").click(function() {
-      var text = $("#inputtext").val();
+      let text = $("#inputtext").val();
       if (text !== "") {
         var fulldialogbox = $('<li>' + '<div class="human">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
         fulldialogbox.find(".text").text(text);
+        $("#chat_ul").empty();
         $("#chat_ul").append(fulldialogbox);
+        send(text);
         $("#inputtext").val("");
       } else {
         return;
@@ -100,7 +102,9 @@
           if (text !== "") {
             var fulldialogbox = $('<li>' + '<div class="human">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
             fulldialogbox.find(".text").text(text);
+            $("#chat_ul").empty();
             $("#chat_ul").append(fulldialogbox);
+            send(text);
             $("#inputtext").val("");
           } else {
             return;
@@ -108,11 +112,48 @@
         }
       });
     });
+
+    function send(text) {
+      var accessToken = "6c8ff636b56e456b83ac49a19ccf56ac";
+      var baseUrl = "https://api.api.ai/v1/";
+      $.ajax({
+        type: "POST",
+        url: baseUrl + "query?v=20150910",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        headers: {
+          "Authorization": "Bearer " + accessToken
+        },
+        data: JSON.stringify({query: text, lang: "en", sessionId: "tuckpuck"}),
+
+        success: function(data) {
+           buildChatDialogue(data);
+        },
+        error: function(error) {
+          console.log(error);
+        }
+      });
+    }
+
+    function buildChatDialogue (data) {
+      console.log(data);
+      var fulldialogbox = $('<li>' + '<div class="bot">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
+      fulldialogbox.find(".text").text(data.result.fulfillment.speech);
+      $("#chat_ul").append(fulldialogbox);
+    }
   </script>
 
   <script>
   $(".cleardialogue").click(function() {
     $("#chat_ul").empty();
+  });
+  </script>
+
+  <script>
+  $(".enterbtn").click(function() {
+    var inputtext = $("#inputtext").val();
+    console.log(inputtext);
+    send(inputtext);
   });
   </script>
 </body>
