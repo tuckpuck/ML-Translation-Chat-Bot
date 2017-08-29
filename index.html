@@ -136,9 +136,14 @@
     }
 
     function buildChatDialogue (data) {
-      console.log(data);
+      console.log(data.result.fulfillment.speech);
       var fulldialogbox = $('<li>' + '<div class="bot">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
-      fulldialogbox.find(".text").text(data.result.fulfillment.speech);
+
+      if(data.result.fulfillment.speech === "") {
+        fulldialogbox.find(".text").text("Please enter valid query");
+      } else {
+        fulldialogbox.find(".text").text(data.result.fulfillment.speech);
+      }
       $("#chat_ul").append(fulldialogbox);
     }
   </script>
@@ -155,6 +160,14 @@
     console.log(inputtext);
     send(inputtext);
   });
+  </script>
+
+  <script>
+  $("li .human .text").click(function() {
+    let currenttext = $("li .human .text").text();
+    $("#inputtext").val(currenttext); 
+  });
+
   </script>
 </body>
 
