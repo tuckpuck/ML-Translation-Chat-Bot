@@ -23,6 +23,7 @@ body {
   font-size: 60px;
   padding-top: 90px;
   font-family: 'Aldrich', sans-serif;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
 .inputcontainer {
@@ -32,6 +33,7 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+  display: inline-flex;
 }
 
 .responsecontainer {
@@ -52,9 +54,9 @@ input {
   border-radius: 3px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  line-height: 43px;
+  line-height: 45px;
   padding: 0em 0.75em;
-  width: 650px;
+  width: 750px;
   -webkit-transition: all 0.35s ease-in;
   -webkit-box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75);
@@ -72,7 +74,7 @@ textarea {
   background-color: white;
   outline-style: none;
   border-radius: 30px;
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
   cursor: pointer;
   display: inline-block;
   font-family: 'Roboto', sans-serif;
@@ -82,16 +84,16 @@ textarea {
   text-align: center;
   vertical-align: center;
   -webkit-transition: all 0.35s ease-in;
-  -webkit-box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75) !important;
 }
 
 .enterbtn:hover, .enterbtn:focus {
   animation: pulse 1s;
-  -webkit-box-shadow: 10px 10px 10px 2em rgba(#efe, 1);
+  /*-webkit-box-shadow: 10px 10px 10px 2em rgba(#efe, 1);
   -moz-box-shadow: 10px 10px 10px 2em rgba(#efe, 1);
-  box-shadow: 10px 10px 10px 2em rgba(#efe, 1);
+  box-shadow: 10px 10px 10px 2em rgba(#efe, 1);*/
 }
 
 .chat-boxposition {
@@ -305,14 +307,9 @@ body {
   }
 }
 
-
-/**/
 /* XS Size*/
-
 @media (max-width: 34em) {}
-
 /* S Size */
-
 @media (min-width: 34em) and (max-width: 48em) {}
 
 @media (max-width: 1250px) {
@@ -321,18 +318,9 @@ body {
   }
 }
 
-
-/* XS and S Size - Mobile*/
-
-@media (max-width: 1300px) {
-  .inputcontainer {
-    display: inline-flex;
-  }
-}
-
 @media (max-width: 1000px) {
   input {
-    width: 450px;
+    width: 600px;
   }
   .chat-box ul li>div .text {
     margin-left: -54px;
@@ -342,7 +330,13 @@ body {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
+  input {
+    width: 450px;
+  }
+}
+
+@media (max-width: 550px) {
   .title {
     font-size: 40px;
     padding-top: 80px;
