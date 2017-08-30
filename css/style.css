@@ -2,12 +2,20 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   margin: 0;
   background-color: #eee;
   max-width: 100vw;
+}
+
+.container-fluid {
+  min-height: 100vh;
 }
 
 .title {
@@ -142,17 +150,154 @@ textarea {
   margin-right: -26px;
 }
 
-.cleardialogue {
+.fixtobottom {
   position: fixed;
+  bottom: 0px;
+  left: 50%;
+}
+
+.bottombuttons {
+  margin: 0 auto;
+  display: table;
+  text-align: center;
+  margin-left: -78px;
+}
+
+.bottombutton {
+  display: table-cell;
+  vertical-align: bottom;
+  margin: 0 2px;
+
+  /*position: fixed;*/
   bottom: 0px;
   border: 1px solid gray;
   background-color: #fff;
   padding: 5px 20px 0px;
   border-radius: 20px 20px 0px 0px;
   font-size: 12px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0%);
 }
+
+/*#clearchat {
+    margin-left: -15px;
+}
+
+#trigger-overlay {
+  margin-left: -95px;
+}*/
+
+
+/* Overlay style */
+
+.overlay {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(153, 204, 51, 0.9);
+}
+
+
+/* Overlay closing cross */
+
+.overlay .overlay-close {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  /*overflow: hidden;*/
+  z-index: 100;
+}
+
+
+/* Menu style */
+
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+
+.overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  min-height: 54px;
+}
+
+.overlay ul li a {
+  font-size: 54px;
+  font-weight: 300;
+  display: block;
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.overlay ul li a:hover, .overlay ul li a:focus {
+  color: #f0f0f0;
+}
+
+
+/* Effects */
+
+body {
+  /*background: #ddd;*/
+}
+
+.container {
+  /*background: #fff;*/
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.container.overlay-open {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.overlay-contentscale {
+  visibility: hidden;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
+  transition: transform 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-contentscale.open {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .overlay ul li {
+    min-height: 34px;
+  }
+}
+
+
+/**/
 
 
 /* XS Size*/

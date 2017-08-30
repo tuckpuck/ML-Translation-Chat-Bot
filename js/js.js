@@ -104,6 +104,6 @@ function buildChatDialogue(data) {
 }
 
 // Clear dialogue on clear button click
-$(".cleardialogue").click(function() {
+$("#clearchat").click(function() {
   $("#chat_ul").empty();
 });
