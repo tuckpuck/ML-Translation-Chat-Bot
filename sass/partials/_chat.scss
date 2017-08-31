@@ -1,0 +1,81 @@
+
+.chat-boxposition {
+  position: absolute !important;
+  top: 52.8% !important;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.chat-box {
+  position: relative;
+  font-size: 18px;
+  border-radius: 0 10px 10px 0;
+  max-width: 450px;
+  margin: 0 auto;
+  float: none;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    &:target {
+      display: block;
+    }
+    li {
+      margin: 10px 0px;
+      .bot {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .human {
+        display: flex;
+        align-items: center;
+        .text {
+          border-radius: 0 20px 20px 20px;
+          text-align: left;
+        }
+      }
+      > div .text {
+        background-color: #fff;
+        display: inline-block;
+        padding: 15px 20px;
+        max-width: 300px;
+        border: $outline-border;
+        margin-left: -104px;
+        border-radius: 20px 0 20px 20px;
+        z-index: 10;
+          @include shadow;
+        position: relative;
+      }
+      .bot .text {
+        margin-right: -26px;
+      }
+    }
+  }
+}
+
+.bot-icon {
+  z-index: 1000;
+  display: inline-block;
+  position: absolute;
+  margin-top: -2px;
+  left: 465px;
+}
+
+.bot-image {
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.human-icon {
+  z-index: 1000;
+  display: inline-block;
+  position: absolute;
+  margin-top: -2px;
+  left: -143px;
+}
+
+.human-image {
+  max-height: 50px;
+  max-width: 50px;
+  border-radius: 30px;
+}

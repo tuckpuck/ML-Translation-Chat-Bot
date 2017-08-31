@@ -1,0 +1,53 @@
+.inputcontainer {
+  z-index: 100;
+  margin-left: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  display: inline-flex;
+}
+
+input:active, input:focus, textarea:active, textarea:focus {
+  border: $outline-border;
+}
+
+input {
+  font-family: $font-stack;
+  border: $outline-border;
+  border-radius: $input-row-border-radius;
+  outline-style: none;
+  font-size: 16px;
+  line-height: 45px;
+  padding: 0em 0.75em;
+  width: 750px;
+  margin-right: 2px;
+  -webkit-transition: all 0.35s ease-in;
+  @include shadow;
+}
+
+textarea {
+  padding: 0.5em;
+  width: 100%;
+  -webkit-transition: all 0.35s ease-in;
+}
+
+.enterbtn {
+  font-family: $font-stack;
+  background-color: white;
+  outline-style: none;
+  border-radius: $input-row-border-radius;
+  border: $outline-border;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 43px;
+  padding: 0 0.9em;
+  text-align: center;
+  -webkit-transition: all 0.35s ease-in;
+  @include shadow;
+}
+
+.fa {
+    -webkit-transition: all 0.35s ease-in;
+}

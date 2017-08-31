@@ -9,6 +9,8 @@ $("#inputtext").focus(function() {
   });
   // $(".enterbtn").css("background-color", "#efe");
   $(".enterbtn").css("box-shadow", "0px 0px 10px -2px rgba(0,0,0,0.75)");
+  $(".enterbtn").addClass('rotated');
+  $(".fa-arrow-right").addClass('unrotated');
 });
 $("#inputtext").focusout(function() {
   $(".enterbtn").css({
@@ -19,7 +21,8 @@ $("#inputtext").focusout(function() {
     'transform': 'scale(1.0)'
   });
   $(".enterbtn").css("background-color", "#fff");
-  $(".enterbtn").css("box-shadow", "none");
+  $(".enterbtn").removeClass('rotated');
+  $(".fa-arrow-right").removeClass('unrotated');
 });
 
 // Creates human dialogue box on enter click, sends API call
