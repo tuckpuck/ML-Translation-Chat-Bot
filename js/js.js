@@ -1,11 +1,3 @@
-// fills input box on chat box click
-// $("div").click(function() {
-//   console.log(event.target.innerHTML)
-//   // var currenttext = $("li .human .text").text().trim();
-//   var currenttext = event.target.innerHTML.trim();
-//   $("#inputtext").val(currenttext);
-// });
-
 // Input box focus animation
 $("#inputtext").focus(function() {
   $(".enterbtn").css({
@@ -105,6 +97,6 @@ function buildChatDialogue(data) {
 }
 
 // Clear dialogue on clear button click
-$("#clearchat").click(function() {
+$("#clear").click(function() {
   $("#chat_ul").empty();
 });

@@ -70,8 +70,8 @@
       <!-- /open close-->
     <div class="fixtobottom text-center">
     <div class="bottombuttons">
-    <button id="trigger-overlay" type="button" class="bottombutton">About</button>
-    <button id="clearchat" type="button" class="bottombutton">Clear</button>
+    <button id="about" type="button" class="bottombutton">About</button>
+    <button id="clear" type="button" class="bottombutton">Clear</button>
     </div>
     </div>
 <!-- End Container -->
@@ -155,7 +155,7 @@ if ( typeof define === 'function' && define.amd ) {
 <script>
 (function() {
 var container = document.querySelector( 'div.container' ),
-  triggerBttn = document.getElementById( 'trigger-overlay' ),
+  triggerBttn = document.getElementById( 'about' ),
   overlay = document.querySelector( 'div.overlay' ),
   closeBttn = overlay.querySelector( 'button.overlay-close' );
   transEndEventNames = {
