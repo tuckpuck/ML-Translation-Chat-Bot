@@ -66,7 +66,7 @@ $("#inputtext").focus(function() {
 
 // API call
 function send(text) {
-  var accessToken = "6c8ff636b56e456b83ac49a19ccf56ac";
+  var accessToken = config.CLIENT_ACCESS_TOKEN;
   var baseUrl = "https://api.api.ai/v1/";
   $.ajax({
     type: "POST",
