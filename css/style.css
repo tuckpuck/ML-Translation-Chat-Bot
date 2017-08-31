@@ -161,13 +161,27 @@ textarea {
   z-index: 1000;
   display: inline-block;
   position: absolute;
-  margin-top: -3px;
+  margin-top: -2px;
   left: 465px;
 }
 
 .bot-image {
   max-height: 50px;
   max-width: 50px;
+}
+
+.human-icon {
+  z-index: 1000;
+  display: inline-block;
+  position: absolute;
+  margin-top: -2px;
+  left: -143px;
+}
+
+.human-image {
+  max-height: 50px;
+  max-width: 50px;
+  border-radius: 30px;
 }
 
 .fixtobottom {
@@ -221,7 +235,6 @@ textarea {
 
 
 /* Overlay closing cross */
-
 .overlay .overlay-close {
   width: 60px;
   height: 60px;
@@ -234,7 +247,6 @@ textarea {
 
 
 /* Menu style */
-
 .overlay nav {
   text-align: center;
   position: relative;
@@ -341,6 +353,9 @@ body {
   .bot-icon {
     left: 415px;
   }
+  .human-icon {
+    left: -93px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -365,6 +380,9 @@ body {
     margin-right: 40px;
   }
   .bot-icon {
+    display: none;
+  }
+  .human-icon {
     display: none;
   }
 }

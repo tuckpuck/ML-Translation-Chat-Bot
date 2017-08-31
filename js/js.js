@@ -34,7 +34,8 @@ $("#inputtext").focusout(function() {
 $(".enterbtn").click(function() {
   let text = $("#inputtext").val();
   if (text !== "") {
-    var fulldialogbox = $('<li>' + '<div class="human">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
+    var fulldialogbox = $('<li>' + '<div class="human">' +
+    '<div class="human-icon">' + '<img class="human-image" src="img/human6.png" alt="">' + '</div>' + '<div class="text">' + '</div>' + '</div>' + '</li>');
     fulldialogbox.find(".text").text(text);
     $("#chat_ul").empty();
     $("#chat_ul").append(fulldialogbox);
@@ -51,7 +52,8 @@ $("#inputtext").focus(function() {
     if (e.which == 13) {
       var text = $("#inputtext").val();
       if (text !== "") {
-        var fulldialogbox = $('<li>' + '<div class="human">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
+        var fulldialogbox = $('<li>' + '<div class="human">' +
+        '<div class="human-icon">' + '<img class="human-image" src="img/human6.png" alt="">' + '</div>' + '<div class="text">' + '</div>' + '</div>' + '</li>');
         fulldialogbox.find(".text").text(text);
         $("#chat_ul").empty();
         $("#chat_ul").append(fulldialogbox);
