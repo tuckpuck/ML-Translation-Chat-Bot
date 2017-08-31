@@ -81,7 +81,6 @@ function send(text) {
       lang: "en",
       sessionId: "tuckpuck"
     }),
-
     success: function(data) {
       buildChatDialogue(data);
     },
@@ -94,7 +93,7 @@ function send(text) {
 // Creates bot dialogue box on data fufillment
 function buildChatDialogue(data) {
   console.log(data.result.fulfillment.speech);
-  var fulldialogbox = $('<li>' + '<div class="bot">' + '<div class="text">' + '</div>' + '</div>' + '</li>');
+  var fulldialogbox = $('<li>' + '<div class="bot">' + '<div class="text">' + '</div>' + '<div class="bot-icon">' +  '<img class="bot-image" src="img/bot1.png" alt="">' + '</div>' + '</div>' + '</li>');
   if (data.result.fulfillment.speech === "") {
     fulldialogbox.find(".text").text("Please enter valid query");
   } else {

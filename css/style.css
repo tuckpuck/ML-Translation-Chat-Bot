@@ -42,9 +42,6 @@ body {
 
 input:active, input:focus, textarea:active, textarea:focus {
   border: 1px solid gray;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
 }
 
 input {
@@ -158,6 +155,19 @@ textarea {
 
 .chat-box ul li .bot .text {
   margin-right: -26px;
+}
+
+.bot-icon {
+  z-index: 1000;
+  display: inline-block;
+  position: absolute;
+  margin-top: -3px;
+  left: 465px;
+}
+
+.bot-image {
+  max-height: 50px;
+  max-width: 50px;
 }
 
 .fixtobottom {
@@ -328,6 +338,9 @@ body {
   .chat-box ul li .bot .text {
     margin-right: 24px;
   }
+  .bot-icon {
+    left: 415px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -350,6 +363,9 @@ body {
   }
   .chat-box ul li .bot .text {
     margin-right: 40px;
+  }
+  .bot-icon {
+    display: none;
   }
 }
 /* Medium - Tablet Size */
