@@ -5,7 +5,7 @@
   border: $outline-border;
   border-radius: $input-row-border-radius;
   position: relative;
-  width: 150px;
+  width: 130px;
   display: block;
   margin-right: 2px;
 
@@ -37,7 +37,7 @@
         width: 100%;
         background: #fff;
         line-height: 47px;
-        font-size: 14px;
+        font-size: 13px;
         display: block;
         cursor: pointer;
         -webkit-backface-visibility: hidden;
@@ -108,9 +108,10 @@
       -ms-transition: all 0.2s linear 0s;
       -o-transition: all 0.2s linear 0s;
       transition: all 0.2s linear 0s;
+      @include shadow;
 
       &:hover {
-        background: #c29ad2;
+        background: gray;
         color: #fff;
       }
     }
