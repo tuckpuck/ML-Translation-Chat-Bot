@@ -29,18 +29,17 @@
   <div class="container-fluid text-center">
     <div class="text-xs-center title">Translation Chat Bot</div>
     <div class="inputcontainer text-xs-center">
+      <select id="cd-dropdown" class="cd-select">
+        <option value="-1" class="over-option" selected>Try a Sample</option>
+        <option value="1" class="under-option">English to Spanish</option>
+        <option value="2" class="under-option">Spanish to English</option>
+        <option value="3" class="under-option">English to Chinese</option>
+        <option value="4" class="under-option">English to German</option>
+        <option value="5" class="under-option">Spanish to French</option>
+      </select>
       <input id="inputtext" type="text">
       <button id="enter" class="enterbtn"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
     </div>
-
-    <select id="cd-dropdown" class="cd-select">
-						<option value="-1" selected>Try a Sample</option>
-						<option value="1" class="icon-chrome">English to Spanish</option>
-						<option value="2" class="icon-safari">Spanish to English</option>
-						<option value="3" class="icon-IE">English to Chinese</option>
-						<option value="4" class="icon-firefox">English to German</option>
-						<option value="5" class="icon-opera">Spanish to French</option>
-					</select>
 
     <div class="chat-boxposition">
       <div class='chat-box text-xs-center col-xs-12'>
@@ -102,15 +101,11 @@
 
   <script type="text/javascript">
   $( function() {
-
     $( '#cd-dropdown' ).dropdown( {
       gutter : 5
     } );
-
   });
-
   </script>
-
 
   <script>( function( window ) {
 
