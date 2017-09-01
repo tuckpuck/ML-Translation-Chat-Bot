@@ -1,15 +1,12 @@
-
 /* VARIABLES */
 $font-stack: 'Roboto', sans-serif;
 $outline-border: 1px solid gray;
 $input-row-border-radius: 3px;
-
 @mixin shadow {
-  -webkit-box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75) !important;
-  -moz-box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75) !important;
-  box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.75) !important;
+  -webkit-box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75) !important;
 }
-
 @import "partials/chatline";
 @import "partials/chat";
 @import "partials/dropdown";
@@ -28,7 +25,7 @@ body {
   margin: 0;
   background-color: #eee;
   max-width: 100vw;
-  background-image: url(../img/5.png);
+  background-image: url("../img/5.png");
 }
 
 .container-fluid {
@@ -39,12 +36,12 @@ body {
   font-size: 60px;
   padding-top: 90px;
   font-family: 'Aldrich', sans-serif;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
 .fixtobottom {
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
   left: 50%;
 }
 
@@ -59,15 +56,14 @@ body {
   display: table-cell;
   vertical-align: bottom;
   margin: 0 2px;
-  bottom: 0px;
+  bottom: 0;
   border: $outline-border;
   background-color: #fff;
-  padding: 5px 20px 0px;
-  border-radius: 20px 20px 0px 0px;
+  padding: 5px 20px 0;
+  border-radius: 20px 20px 0 0;
   font-size: 15px;
   @include shadow;
 }
-
 /* Overlay style */
 .overlay {
   position: fixed;
@@ -77,6 +73,7 @@ body {
   top: 0;
   left: 0;
   background: rgba(153, 204, 51, 0.9);
+
   .overlay-close {
     width: 60px;
     height: 60px;
@@ -85,6 +82,7 @@ body {
     top: 20px;
     z-index: 100;
   }
+
   nav {
     text-align: center;
     position: relative;
@@ -93,6 +91,7 @@ body {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+
   ul {
     list-style: none;
     padding: 0;
@@ -100,11 +99,13 @@ body {
     display: inline-block;
     height: 100%;
     position: relative;
+
     li {
       display: block;
       height: 20%;
       height: calc(100% / 5);
       min-height: 54px;
+
       a {
         font-size: 54px;
         font-weight: 300;
@@ -112,7 +113,9 @@ body {
         color: #fff;
         -webkit-transition: color 0.2s;
         transition: color 0.2s;
-        &:hover, &:focus {
+
+        &:focus,
+        &:hover {
           color: #f0f0f0;
         }
       }
@@ -159,61 +162,93 @@ body {
   -moz-transform: rotate(-90deg) !important;
   -webkit-transform: rotate(-90deg) !important;
 }
-
 // Media Queries
 @media screen and (max-height: 30.5em) {
   .overlay nav {
     height: 70%;
     font-size: 34px;
   }
+
   .overlay ul li {
     min-height: 34px;
   }
 }
-
 @media (max-width: 1000px) {
   input {
     width: 600px;
   }
-  .chat-box ul li>div .text {
-    margin-left: -54px;
+
+  .chat-box ul li > div .text {
+    margin-left: -34px;
   }
+
   .chat-box ul li .bot .text {
-    margin-right: 24px;
+    margin-right: -31px;
   }
+
   .bot-icon {
-    left: 415px;
+    left: 470px;
   }
+
   .human-icon {
-    left: -93px;
+    left: -73px;
   }
 }
-
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   input {
     width: 450px;
   }
-}
 
-@media (max-width: 550px) {
+  .chat-box ul li > div .text {
+    margin-left: 49px;
+  }
+
+  .chat-box ul li .bot .text {
+    margin-right: 52px;
+  }
+
+  .bot-icon {
+    left: 387px;
+  }
+
+  .human-icon {
+    // -73
+    left: 10px;
+  }
+}
+@media (max-width: 670px) {
   .title {
     font-size: 40px;
     padding-top: 80px;
     font-family: 'Aldrich', sans-serif;
   }
+
   input {
     width: 300px;
   }
-  .chat-box ul li>div .text {
-    margin-left: 0px;
+
+  .chat-box ul li > div .text {
+    margin-left: 0;
   }
+
   .chat-box ul li .bot .text {
-    margin-right: 40px;
+    margin-right: 70px;
   }
+
   .bot-icon {
     display: none;
   }
+
   .human-icon {
     display: none;
+  }
+
+  .cd-dropdown {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .chat-box ul li > div .text {
+    margin-left: -25px;
   }
 }

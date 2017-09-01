@@ -8,7 +8,7 @@
 
 .chat-box {
   position: relative;
-  font-size: 18px;
+  font-size: 19px;
   border-radius: 0 10px 10px 0;
   max-width: 450px;
   margin: 0 auto;
@@ -37,7 +37,7 @@
       > div .text {
         background-color: #fff;
         display: inline-block;
-        padding: 15px 20px;
+        padding: 15px 15px;
         max-width: 300px;
         border: $outline-border;
         margin-left: -104px;
@@ -47,7 +47,8 @@
         position: relative;
       }
       .bot .text {
-        margin-right: -26px;
+        margin-right: -106px;
+        text-align: left;
       }
     }
   }
@@ -58,7 +59,7 @@
   display: inline-block;
   position: absolute;
   margin-top: -2px;
-  left: 465px;
+  left: 545px;
 }
 
 .bot-image {
