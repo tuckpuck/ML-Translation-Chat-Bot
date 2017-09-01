@@ -8,7 +8,7 @@ $("#inputtext").focus(function() {
     'transform': 'scale(1.1)'
   });
   // $(".enterbtn").css("background-color", "#efe");
-  $(".enterbtn").css("box-shadow", "0px 0px 10px -2px rgba(0,0,0,0.75)");
+  // $(".enterbtn").css("box-shadow", "0px 0px 10px -2px rgba(0,0,0,0.75)");
   $(".enterbtn").addClass('rotated');
   $(".fa-arrow-right").addClass('unrotated');
 });

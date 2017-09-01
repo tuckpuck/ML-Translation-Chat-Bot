@@ -16,8 +16,13 @@
   <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
   <!--font awesome-->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type='text/css'>
+  <!-- dropdown style -->
+  <link rel="stylesheet" type="text/css" href="css/style5.css" />
+  <!-- modernizr -->
+  <script src="js/modernizr.custom.63321.js"></script>
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 
 <body>
@@ -27,6 +32,16 @@
       <input id="inputtext" type="text">
       <button id="enter" class="enterbtn"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
     </div>
+
+    <select id="cd-dropdown" class="cd-select">
+						<option value="-1" selected>Select a browser</option>
+						<option value="1" class="icon-chrome">Chrome</option>
+						<option value="2" class="icon-safari">Safari</option>
+						<option value="3" class="icon-IE">Internet Explorer</option>
+						<option value="4" class="icon-firefox">Firefox</option>
+						<option value="5" class="icon-opera">Opera</option>
+					</select>
+
     <div class="chat-boxposition">
       <div class='chat-box text-xs-center col-xs-12'>
         <ul id='chat_ul'>
@@ -78,10 +93,27 @@
   </div>
   <!-- jquery 3.2.1 -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- dropdown plugin -->
+  <script type="text/javascript" src="js/jquery.dropdown.js"></script>
   <!-- config file -->
-  <script type='text/javascript' src='config.js'></script>
+  <script type='text/javascript' src='js/config.js'></script>
   <!-- main js -->
   <script src="js/js.js"></script>
+
+  <script type="text/javascript">
+
+    $( function() {
+
+      $( '#cd-dropdown' ).dropdown( {
+        gutter : 5,
+        stack : false,
+        slidingIn : 100
+      } );
+
+    });
+
+  </script>
+
 
   <script>( function( window ) {
 

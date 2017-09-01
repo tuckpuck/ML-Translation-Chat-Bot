@@ -12,6 +12,7 @@ $input-row-border-radius: 3px;
 
 @import "partials/chatline";
 @import "partials/chat";
+@import "partials/dropdown";
 
 * {
   box-sizing: border-box;
@@ -146,17 +147,17 @@ body {
 }
 
 .rotated {
-  transform: rotate(45deg) !important;
-  -ms-transform: rotate(45deg) !important;
-  -moz-transform: rotate(45deg) !important;
-  -webkit-transform: rotate(45deg) !important;
+  transform: rotate(90deg) !important;
+  -ms-transform: rotate(90deg) !important;
+  -moz-transform: rotate(90deg) !important;
+  -webkit-transform: rotate(90deg) !important;
 }
 
 .unrotated {
-  transform: rotate(-45deg) !important;
-  -ms-transform: rotate(-45deg) !important;
-  -moz-transform: rotate(-45deg) !important;
-  -webkit-transform: rotate(-45deg) !important;
+  transform: rotate(-90deg) !important;
+  -ms-transform: rotate(-90deg) !important;
+  -moz-transform: rotate(-90deg) !important;
+  -webkit-transform: rotate(-90deg) !important;
 }
 
 // Media Queries
