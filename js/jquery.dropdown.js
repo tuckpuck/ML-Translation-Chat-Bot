@@ -81,8 +81,8 @@
 				if( val !== -1 ) {
 					optshtml +=
 						classes !== undefined ?
-							'<li data-value="' + val + '"><span class="' + classes + '">' + label + '</span></li>' :
-							'<li data-value="' + val + '"><span>' + label + '</span></li>';
+							'<li id="' + val + '" data-value="' + val + '"><span id="' + val + '" class="' + classes + '">' + label + '</span></li>' :
+							'<li data-value="' + val + '"><span id="' + val + '">' + label + '</span></li>';
 				}
 
 				if( selected ) {

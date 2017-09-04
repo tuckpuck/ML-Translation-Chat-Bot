@@ -1,3 +1,22 @@
+// Make things happen on dropdown button clicks
+$("body").click(function(e) {
+  if(event.target.innerHTML === "English to Spanish"){
+    alert("pressed1");
+  };
+  if(event.target.innerHTML === "English to Chinese"){
+    alert("pressed2");
+  };
+  if(event.target.innerHTML === "English to Arabic"){
+    alert("pressed3");
+  };
+  if(event.target.innerHTML === "Spanish to English"){
+    alert("pressed4");
+  };
+  if(event.target.innerHTML === "Spanish to French"){
+    alert("pressed5");
+  };
+});
+
 // Input box focus animation
 $("#inputtext").focus(function() {
   $(".enterbtn").css({
