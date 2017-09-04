@@ -55,7 +55,7 @@
 			this.optsCount = this.opts.length;
 			this.size = { width : this.dd.width(), height : this.dd.height() };
 
-			var elName = this.$el.attr( 'name' ), elId = this.$el.attr( 'id' ),
+			var elName = "this.$el.attr( 'name' )", elId = this.$el.attr( 'id' ),
 				inputName = elName !== undefined ? elName : elId !== undefined ? elId : 'cd-dropdown-' + ( new Date() ).getTime();
 
 			this.inputEl = $( '<input type="hidden" name="' + inputName + '" value="' + value + '"></input>' ).insertAfter( this.selectlabel );

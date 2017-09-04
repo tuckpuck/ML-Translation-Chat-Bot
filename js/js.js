@@ -1,21 +1,22 @@
 // Make things happen on dropdown button clicks
 $("body").click(function(e) {
   if(event.target.innerHTML === "English to Spanish"){
-    alert("pressed1");
+    $("#inputtext").val("I would like a cup of coffee in spanish");
   };
   if(event.target.innerHTML === "English to Chinese"){
-    alert("pressed2");
+    $("#inputtext").val("what time will the bus arrive in Chinese");
   };
   if(event.target.innerHTML === "English to Arabic"){
-    alert("pressed3");
+      $("#inputtext").val("translate what time does the bank close into Arabic");
   };
   if(event.target.innerHTML === "Spanish to English"){
-    alert("pressed4");
+    $("#inputtext").val("buenas tardes tengo una reservación into English");
   };
-  if(event.target.innerHTML === "Spanish to French"){
-    alert("pressed5");
+  if(event.target.innerHTML === "Spanish to German"){
+    $("#inputtext").val("translate buenos dias como estas into German");
   };
 });
+
 
 // Input box focus animation
 $("#inputtext").focus(function() {

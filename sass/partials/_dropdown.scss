@@ -96,7 +96,8 @@
 
 .cd-active.cd-dropdown {
   > span {
-    // color: #999;
+    color: white;
+    background-color: #808080;
   }
 
   ul li {
@@ -116,4 +117,8 @@
       }
     }
   }
+}
+
+.under-option {
+  font-size: 13px;
 }
