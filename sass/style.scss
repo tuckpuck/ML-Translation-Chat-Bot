@@ -47,7 +47,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(153, 204, 51, 0.9);
+  background: rgba(255, 155, 48, 0.9);
 
   .overlay-close {
     width: 60px;
@@ -77,23 +77,10 @@ body {
 
     li {
       display: block;
-      height: 20%;
+      margin: 75px 300px;
+      height: 40%;
       height: calc(100% / 5);
       min-height: 54px;
-
-      a {
-        font-size: 54px;
-        font-weight: 300;
-        display: block;
-        color: #fff;
-        -webkit-transition: color 0.2s;
-        transition: color 0.2s;
-
-        &:focus,
-        &:hover {
-          color: #f0f0f0;
-        }
-      }
     }
   }
 }
@@ -197,6 +184,9 @@ body {
   }
 }
 @media (max-width: 900px) {
+  .overlay ul li {
+      margin: 75px 100px;
+  }
   input {
     width: 450px;
   }
@@ -219,6 +209,9 @@ body {
   }
 }
 @media (max-width: 670px) {
+  .overlay ul li {
+      margin: 75px 20px;
+  }
   .title {
     font-size: 40px;
     padding-top: 80px;

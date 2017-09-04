@@ -247,7 +247,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(153, 204, 51, 0.9); }
+  background: rgba(255, 155, 48, 0.9); }
   .overlay .overlay-close {
     width: 60px;
     height: 60px;
@@ -271,18 +271,10 @@ body {
     position: relative; }
     .overlay ul li {
       display: block;
-      height: 20%;
+      margin: 75px 300px;
+      height: 40%;
       height: calc(100% / 5);
       min-height: 54px; }
-      .overlay ul li a {
-        font-size: 54px;
-        font-weight: 300;
-        display: block;
-        color: #fff;
-        -webkit-transition: color 0.2s;
-        transition: color 0.2s; }
-        .overlay ul li a:focus, .overlay ul li a:hover {
-          color: #f0f0f0; }
 
 /* Effects */
 .container {
@@ -367,6 +359,9 @@ body {
   .human-icon {
     left: -73px; } }
 @media (max-width: 900px) {
+  .overlay ul li {
+    margin: 75px 100px; }
+
   input {
     width: 450px; }
 
@@ -382,6 +377,9 @@ body {
   .human-icon {
     left: 10px; } }
 @media (max-width: 670px) {
+  .overlay ul li {
+    margin: 75px 20px; }
+
   .title {
     font-size: 40px;
     padding-top: 80px;
