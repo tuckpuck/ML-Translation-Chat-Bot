@@ -54,6 +54,8 @@ $(".enterbtn").click(function() {
     $("#chat_ul").append(fulldialogbox);
     send(text);
     $("#inputtext").val("");
+    $(".cd-dropdown span span.under-option")[0].innerHTML = "Examples";
+    $(".cd-dropdown span span.under-option").addClass("font-reset");
   } else {
     return;
   }
@@ -72,6 +74,8 @@ $("#inputtext").focus(function() {
         $("#chat_ul").append(fulldialogbox);
         send(text);
         $("#inputtext").val("");
+        $(".cd-dropdown span span.under-option")[0].innerHTML = "Examples";
+        $(".cd-dropdown span span.under-option").addClass("font-reset");
       } else {
         return;
       }

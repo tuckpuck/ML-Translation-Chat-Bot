@@ -39,31 +39,6 @@ body {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
-.fixtobottom {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-}
-
-.bottombuttons {
-  margin: 0 auto;
-  display: table;
-  text-align: center;
-  margin-left: -78px;
-}
-
-.bottombutton {
-  display: table-cell;
-  vertical-align: bottom;
-  margin: 0 2px;
-  bottom: 0;
-  border: $outline-border;
-  background-color: #fff;
-  padding: 5px 20px 0;
-  border-radius: 20px 20px 0 0;
-  font-size: 15px;
-  @include shadow;
-}
 /* Overlay style */
 .overlay {
   position: fixed;
@@ -161,6 +136,32 @@ body {
   -ms-transform: rotate(-90deg) !important;
   -moz-transform: rotate(-90deg) !important;
   -webkit-transform: rotate(-90deg) !important;
+}
+
+.fixtobottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+}
+
+.bottombuttons {
+  margin: 0 auto;
+  display: table;
+  text-align: center;
+  margin-left: -78px;
+}
+
+.bottombutton {
+  display: table-cell;
+  vertical-align: bottom;
+  margin: 0 2px;
+  bottom: 0;
+  border: $outline-border;
+  background-color: #fff;
+  padding: 5px 20px 0;
+  border-radius: 20px 20px 0 0;
+  font-size: 15px;
+  @include shadow;
 }
 
 // Media Queries
