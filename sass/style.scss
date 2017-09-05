@@ -47,7 +47,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(255, 155, 48, 0.9);
+  background: rgba(255, 155, 48, 0.95);
 
   .overlay-close {
     width: 60px;
@@ -56,33 +56,26 @@ body {
     right: 20px;
     top: 20px;
     z-index: 100;
-  }
+}}
 
-  nav {
-    text-align: center;
-    position: relative;
-    top: 50%;
-    height: 60%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
+.about-text{
+  margin-top: 190px;
+}
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    height: 100%;
-    position: relative;
+.horizontal-rule {
+  border-top: 1px solid black;
+  margin: 50px 0px;
+}
 
-    li {
-      display: block;
-      margin: 75px 300px;
-      height: 40%;
-      height: calc(100% / 5);
-      min-height: 54px;
-    }
-  }
+.languages {
+  list-style:armenian !important;
+  overflow: auto;
+}
+
+.languages li {
+  font-size: 12px;
+  display: inline !important;
+  height: 0px !important;
 }
 /* Effects */
 .container {
@@ -185,7 +178,7 @@ body {
 }
 @media (max-width: 900px) {
   .overlay ul li {
-      margin: 75px 100px;
+      margin: 50px 100px;
   }
   input {
     width: 450px;
@@ -210,7 +203,7 @@ body {
 }
 @media (max-width: 670px) {
   .overlay ul li {
-      margin: 75px 20px;
+      margin: 50px 20px;
   }
   .title {
     font-size: 40px;
