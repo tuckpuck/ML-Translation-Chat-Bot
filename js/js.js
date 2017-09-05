@@ -17,7 +17,6 @@ $("body").click(function(e) {
   };
 });
 
-
 // Input box focus animation
 $("#inputtext").focus(function() {
   $(".enterbtn").css({
@@ -29,6 +28,8 @@ $("#inputtext").focus(function() {
   });
   $(".enterbtn").addClass('rotated');
   $(".fa-arrow-right").addClass('unrotated');
+  $(".cd-dropdown span span.under-option")[0].innerHTML = "Examples";
+  $(".cd-dropdown span span.under-option").addClass("font-reset");
 });
 $("#inputtext").focusout(function() {
   $(".enterbtn").css({
