@@ -33,10 +33,17 @@ body {
 }
 
 .title {
-  font-size: 60px;
+  font-size: 55px;
   padding-top: 90px;
-  font-family: 'Aldrich', sans-serif;
+  font-family: 'Rock Salt', sans-serif;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.intro-text {
+  padding-top: 80px;
+  font-size: 16px;
+  // font-family: 'Rock Salt', sans-serif;
+  font-family: $font-stack;
 }
 
 /* Overlay style */
@@ -81,6 +88,20 @@ body {
   display: inline !important;
   height: 0px !important;
 }
+
+.see-work{
+  margin-top: 70px;
+}
+
+.see-work a {
+  font-size: 14px;
+  color: #333;
+}
+
+.see-work a:hover {
+text-decoration: none;
+}
+
 /* Effects */
 .container {
   -webkit-transition: -webkit-transform 0.5s;
