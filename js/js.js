@@ -1,7 +1,13 @@
 // Make things happen on dropdown button clicks
 $("body").click(function(e) {
   if(event.target.innerHTML === "English to Spanish"){
-    $("#inputtext").val("I would like a cup of coffee in spanish");
+    $("#inputtext").val("How do you say I would like a cup of coffee in spanish?");
+  };
+  if(event.target.innerHTML === "English to Thai"){
+    $("#inputtext").val("Translate can you recommend somewhere to eat into Thai");
+  };
+  if(event.target.innerHTML === "English to Russian"){
+    $("#inputtext").val("Translate where is the nearest museum into Russian");
   };
   if(event.target.innerHTML === "English to Chinese"){
     $("#inputtext").val("what time will the bus arrive in Chinese");
@@ -28,8 +34,10 @@ $("#inputtext").focus(function() {
   });
   $(".enterbtn").addClass('rotated');
   $(".fa-arrow-right").addClass('unrotated');
-  $(".cd-dropdown span span.under-option")[0].innerHTML = "Examples";
-  $(".cd-dropdown span span.under-option").addClass("font-reset");
+  if ( $(".cd-dropdown span span.under-option").length !== 0) {
+    $(".cd-dropdown span span.under-option")[0].innerHTML = "Examples";
+    $(".cd-dropdown span span.under-option").addClass("font-reset");
+  }
 });
 $("#inputtext").focusout(function() {
   $(".enterbtn").css({
@@ -75,8 +83,10 @@ $("#inputtext").focus(function() {
         $("#chat_ul").append(fulldialogbox);
         send(text);
         $("#inputtext").val("");
-        $(".cd-dropdown span span.under-option")[0].innerHTML = "Examples";
-        $(".cd-dropdown span span.under-option").addClass("font-reset");
+        if ( $(".cd-dropdown span span.under-option").length !== 0) {
+          $(".cd-dropdown span span.under-option")[0].innerHTML = "Examples";
+          $(".cd-dropdown span span.under-option").addClass("font-reset");
+        }
       } else {
         return;
       }

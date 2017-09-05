@@ -34,6 +34,8 @@
       <select id="cd-dropdown" class="cd-select">
         <option value="-1" class="over-option" selected>Examples</option>
         <option value="1" class="under-option">English to Spanish</option>
+        <option value="6" class="under-option">English to Thai</option>
+        <option value="7" class="under-option">English to Russian</option>
         <option value="2" class="under-option">English to Chinese</option>
         <option value="3" class="under-option">English to Arabic</option>
         <option value="4" class="under-option">Spanish to English</option>
@@ -74,12 +76,12 @@
         <button type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i>
   </button>
   <div class="text-xs-center col-xs-6 col-xs-offset-3 about-text">
-Translation Chatbot uses Natural Language Processing (API.ai) and Google Translate to offer quick translations into over 100 languages. The app is designed to be simple to use, requiring only natural text and the language you wish to translate to.
+Translation Chatbot uses Natural Language Processing (API.ai) and Google Translate to offer quick translations into over 100 languages. The service needs two things: text you want to translate and the language to translate to. It will auto-detect the language of your text and return a response.
 <hr class="horizontal-rule">
 </div>
 <div class="text-xs-center col-xs-8 col-xs-offset-2">
-  Available Languages:
-            <ol class="languages">
+  <span class="smaller-font">Available Languages:</span>
+<ol class="languages">
 <li>Afrikaans</li>
 <li>Albanian</li>
 <li>Amharic</li>
@@ -226,15 +228,16 @@ function classReg( className ) {
 // altho to be fair, the api sucks because it won't accept multiple classes at once
 var hasClass, addClass, removeClass;
 
-if ( 'classList' in document.documentElement ) {
+if ( 'body' in document.documentElement ) {
+  console.log(document.documentElement);
   hasClass = function( elem, c ) {
-    return elem.classList.contains( c );
+    return elem.body.contains( c );
   };
   addClass = function( elem, c ) {
-    elem.classList.add( c );
+    elem.body.add( c );
   };
   removeClass = function( elem, c ) {
-    elem.classList.remove( c );
+    elem.body.remove( c );
   };
 }
 else {

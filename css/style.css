@@ -142,13 +142,23 @@ textarea {
   background: #fff;
   display: block;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s; }
 .cd-dropdown ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: block;
-  position: relative; }
+  position: relative;
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s; }
   .cd-dropdown ul li {
     display: block; }
     .cd-dropdown ul li span {
@@ -255,6 +265,9 @@ body {
     right: 20px;
     top: 20px;
     z-index: 100; }
+
+.smaller-font {
+  font-size: 18px; }
 
 .about-text {
   margin-top: 190px; }

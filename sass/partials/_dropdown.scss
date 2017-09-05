@@ -21,6 +21,11 @@
     display: block;
     position: relative;
     cursor: pointer;
+    -webkit-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -ms-transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
   }
 
   ul {
@@ -29,6 +34,11 @@
     padding: 0;
     display: block;
     position: relative;
+    -webkit-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -ms-transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
 
     li {
       display: block;
