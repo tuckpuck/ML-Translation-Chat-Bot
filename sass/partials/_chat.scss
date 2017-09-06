@@ -30,6 +30,7 @@
       .human {
         display: flex;
         align-items: center;
+        margin-left: 8px;
         .text {
           border-radius: 0 20px 20px 20px;
           text-align: left;
@@ -75,5 +76,5 @@
   display: inline-block;
   position: absolute;
   margin-top: -2px;
-  left: -143px;
+  left: -135px;
 }

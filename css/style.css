@@ -78,7 +78,8 @@ textarea {
         align-items: center; }
       .chat-box ul li .human {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        margin-left: 8px; }
         .chat-box ul li .human .text {
           border-radius: 0 20px 20px 20px;
           text-align: left; }
@@ -117,7 +118,7 @@ textarea {
   display: inline-block;
   position: absolute;
   margin-top: -2px;
-  left: -143px; }
+  left: -135px; }
 
 .cd-dropdown,
 .cd-select {
@@ -225,7 +226,8 @@ textarea {
   font-size: 16px !important; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline-style: none; }
 
 html {
   min-height: 100vh; }
@@ -245,11 +247,13 @@ body {
   font-size: 55px;
   padding-top: 90px;
   font-family: 'Rock Salt', sans-serif;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2); }
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  z-index: 5010; }
 
 .intro-text {
   padding-top: 85px;
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 27px;
   font-family: "Roboto", sans-serif; }
 
 /* Overlay style */
@@ -264,6 +268,9 @@ body {
   overflow: scroll; }
   .overlay .overlay-close {
     width: 60px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 3px;
     height: 60px;
     position: absolute;
     right: 20px;
@@ -274,7 +281,7 @@ body {
   font-size: 18px; }
 
 .about-text {
-  margin-top: 190px; }
+  margin-top: 170px; }
 
 .horizontal-rule {
   border-top: 1px solid black;
@@ -290,7 +297,7 @@ body {
   height: 0px !important; }
 
 .see-work {
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 20px; }
 
 .see-work a {
@@ -357,6 +364,9 @@ body {
   -ms-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s; }
 
+.tray-icon {
+  cursor: pointer; }
+
 .divider {
   clear: both;
   position: relative; }
@@ -386,7 +396,7 @@ body {
   margin: 0 auto;
   display: table;
   text-align: center;
-  margin-left: -115px; }
+  margin-left: -123px; }
 
 .bottombutton {
   display: table-cell;
@@ -431,7 +441,7 @@ body {
     left: 470px; }
 
   .human-icon {
-    left: -73px; } }
+    left: -65px; } }
 @media (max-width: 900px) {
   .overlay ul li {
     margin: 50px 100px; }
@@ -449,7 +459,7 @@ body {
     left: 387px; }
 
   .human-icon {
-    left: 10px; } }
+    left: 18px; } }
 @media (max-width: 700px) {
   .about-text {
     margin-top: 100px;

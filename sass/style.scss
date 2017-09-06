@@ -13,6 +13,7 @@ $input-row-border-radius: 3px;
 
 * {
   box-sizing: border-box;
+  outline-style: none;
 }
 
 html {
@@ -37,12 +38,13 @@ body {
   padding-top: 90px;
   font-family: 'Rock Salt', sans-serif;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  z-index: 5010;
 }
 
 .intro-text {
   padding-top: 85px;
-  font-size: 16px;
-  // font-family: 'Rock Salt', sans-serif;
+  font-size: 17px;
+  line-height: 27px;
   font-family: $font-stack;
 }
 
@@ -59,6 +61,9 @@ body {
 
   .overlay-close {
     width: 60px;
+    background-color: white;
+    border: $outline-border;
+    border-radius: $input-row-border-radius;
     height: 60px;
     position: absolute;
     right: 20px;
@@ -71,7 +76,7 @@ body {
 }
 
 .about-text{
-  margin-top: 190px;
+  margin-top: 170px;
 }
 
 .horizontal-rule {
@@ -91,7 +96,7 @@ body {
 }
 
 .see-work{
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 20px;
 }
 
@@ -168,6 +173,10 @@ text-decoration: none;
   transition: all 0.2s linear 0s;
 }
 
+.tray-icon {
+  cursor: pointer;
+}
+
 .divider{
 	clear: both;
 	position: relative;
@@ -201,7 +210,7 @@ text-decoration: none;
   margin: 0 auto;
   display: table;
   text-align: center;
-  margin-left: -115px;
+  margin-left: -123px;
 }
 
 .bottombutton {
@@ -257,7 +266,7 @@ text-decoration: none;
   }
 
   .human-icon {
-    left: -73px;
+    left: -65px;
   }
 }
 @media (max-width: 900px) {
@@ -281,8 +290,8 @@ text-decoration: none;
   }
 
   .human-icon {
-    // -73
-    left: 10px;
+
+    left: 18px;
   }
 }
 @media (max-width: 700px) {

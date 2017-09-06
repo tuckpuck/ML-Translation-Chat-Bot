@@ -121,13 +121,13 @@
 // Make things happen on dropdown button clicks
 $("body").click(function(e) {
   if(event.target.innerHTML === "English to Spanish"){
-    $("#inputtext").val("How do you say I would like a cup of coffee in spanish?");
+    $("#inputtext").val("how do you say I would like a cup of coffee in spanish?");
   };
   if(event.target.innerHTML === "English to Thai"){
-    $("#inputtext").val("Translate can you recommend somewhere to eat into Thai");
+    $("#inputtext").val("translate can you recommend somewhere to eat into Thai");
   };
   if(event.target.innerHTML === "English to Russian"){
-    $("#inputtext").val("Translate where is the nearest museum into Russian");
+    $("#inputtext").val("where is the nearest museum into Russian");
   };
   if(event.target.innerHTML === "English to Chinese"){
     $("#inputtext").val("what time will the bus arrive in Chinese");
