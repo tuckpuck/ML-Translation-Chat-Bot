@@ -40,7 +40,7 @@ body {
 }
 
 .intro-text {
-  padding-top: 80px;
+  padding-top: 85px;
   font-size: 16px;
   // font-family: 'Rock Salt', sans-serif;
   font-family: $font-stack;
@@ -55,6 +55,7 @@ body {
   top: 0;
   left: 0;
   background: rgba(255, 155, 48, 0.95);
+  overflow: scroll;
 
   .overlay-close {
     width: 60px;
@@ -79,8 +80,8 @@ body {
 }
 
 .languages {
-  list-style:armenian !important;
   overflow: auto;
+  padding: 0 0 !important;
 }
 
 .languages li {
@@ -90,11 +91,12 @@ body {
 }
 
 .see-work{
-  margin-top: 70px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .see-work a {
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
 }
 
@@ -153,7 +155,7 @@ text-decoration: none;
   margin: 0 auto;
   display: table;
   text-align: center;
-  margin-left: -78px;
+  margin-left: -123px;
 }
 
 .bottombutton {
@@ -226,6 +228,22 @@ text-decoration: none;
     left: 10px;
   }
 }
+@media (max-width: 700px) {
+  .about-text{
+    margin-top: 100px;
+    margin-bottom: -20px;
+    font-size: 16px;
+  }
+  .see-work {
+    margin-top: 15px;
+  }
+  .horizontal-rule {
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+}
+
+
 @media (max-width: 670px) {
   .overlay ul li {
       margin: 50px 20px;
@@ -263,5 +281,8 @@ text-decoration: none;
 @media (max-width: 400px) {
   .chat-box ul li > div .text {
     margin-left: -25px;
+  }
+  .languages li {
+    font-size: 10px;
   }
 }
