@@ -146,7 +146,7 @@ text-decoration: none;
 }
 
 .fixtobottom {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 50%;
 }
@@ -169,7 +169,98 @@ text-decoration: none;
   border-radius: 20px 20px 0 0;
   font-size: 15px;
   @include shadow;
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
 }
+
+.bottombutton:hover {
+    background: gray;
+    color: #fff;
+}
+
+//Tooltips
+/* Base styles for the entire tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition:
+      opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    -moz-transition:
+        opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    transition:
+        opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform:    translate3d(0, 0, 0);
+  transform:         translate3d(0, 0, 0);
+  pointer-events: none;
+}
+// Tooltip
+/** tooltip styles
+  * based on http://www.flatypo.net/tutorials/how-to-create-animated-tooltips-css3-hiperlink/
+ **/
+a.tool-tip{
+  position: relative;
+  display: inline;
+}
+a.tool-tip:after{
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  opacity: 0;
+  content: attr(data-tool); /* might also use attr(title) */
+  height: auto;
+  min-width: 100px;
+  padding: 5px 8px;
+  z-index: 999;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(0,0,0,0.85);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+a.tool-tip:before {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  left: 50%;
+  bottom: 0px;
+  opacity: 0;
+  content: "";
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: rgba(0,0,0,0.85) transparent transparent transparent;
+}
+a.tool-tip:hover:after{ visibility: visible; opacity: 1; bottom: 20px; }
+a.tool-tip:hover:before{ visibility: visible; opacity: 1; bottom: 14px; }
+
+a.tool-tip.animate:after, a.tool-tip.animate:before {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
 
 // Media Queries
 @media screen and (max-height: 30.5em) {
