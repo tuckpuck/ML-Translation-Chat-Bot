@@ -4,6 +4,7 @@
   top: 52.6% !important;
   width: 100%;
   margin-left: 30px;
+  overflow: visible;
 }
 
 .chat-box {
@@ -54,17 +55,19 @@
   }
 }
 
-.bot-icon {
+.icon {
   z-index: 100;
+  display: inline-block;
+  max-height: 50px;
+  max-width: 50px;
+  border-radius: 30px;
+}
+
+.bot-icon {
   display: inline-block;
   position: absolute;
   margin-top: -2px;
   left: 545px;
-}
-
-.bot-image {
-  max-height: 50px;
-  max-width: 50px;
 }
 
 .human-icon {
@@ -73,10 +76,4 @@
   position: absolute;
   margin-top: -2px;
   left: -143px;
-}
-
-.human-image {
-  max-height: 50px;
-  max-width: 50px;
-  border-radius: 30px;
 }

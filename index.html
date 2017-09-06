@@ -57,7 +57,7 @@
           <li>
             <div class='human'>
               <div class='human-icon'>
-                <img class='human-image' src="img/human6.png" alt="">
+                <img class='human-image icon' src="img/human6.png" alt="">
               </div>
               <div class='text'>
                 What is hola mundo in english?
@@ -70,7 +70,7 @@
                 Hello World
               </div>
               <div class='bot-icon'>
-                <img class='bot-image' src="img/bot1.png" alt="">
+                <img class='bot-image icon' src="img/bot1.png" alt="">
               </div>
             </div>
           </li>
@@ -201,18 +201,19 @@
     <!-- Icons box -->
     <div class="icon-container">
       <div class="icon-box">
-        <img class='bot-image human-change' src="img/human1.png" alt="">
-        <img class='bot-image human-change' src="img/human2.png" alt="">
-        <img class='bot-image human-change' src="img/human3.png" alt="">
-        <img class='bot-image human-change' src="img/human4.png" alt="">
-        <img class='bot-image human-change' src="img/human5.png"
-          alt="">
-          <img class='bot-image human-change' src="img/human6.png" alt="">
-          <img class='bot-image' src="img/bot1.png" alt="">
-          <img class='bot-image' src="img/bot2.png" alt="">
-          <img class='bot-image' src="img/bot3.png" alt="">
-          <img class='bot-image' src="img/bot4.png"
-          alt=""></div>
+        <img class='icon human-change' src="img/human1.png" alt="">
+        <img class='icon human-change' src="img/human2.png" alt="">
+        <img class='icon human-change' src="img/human3.png" alt="">
+        <img class='icon human-change' src="img/human4.png" alt="">
+        <img class='icon human-change' src="img/human5.png" alt="">
+        <img class='icon human-change' src="img/human6.png" alt="">
+        <div class="divider"></div>
+        <img class='icon bot-change' src="img/bot1.png" alt="">
+        <img class='icon bot-change' src="img/bot2.png" alt="">
+        <img class='icon bot-change' src="img/bot3.png" alt="">
+        <img class='icon bot-change' src="img/bot4.png" alt="">
+      <img class='icon bot-change' src="img/bot5.png" alt="">
+    <img class='icon bot-change' src="img/bot6.png" alt=""></div>
     </div>
     <!-- /open close-->
     <div class="fixtobottom text-center">
@@ -232,142 +233,6 @@
   <script type='text/javascript' src='js/config.js'></script>
   <!-- main js -->
   <script src="js/js.js"></script>
-
-  <script>
-    $(".icon-container").hide();
-
-    $("#icons").click(function() {
-      $(".icon-container").slideToggle("ease-in");
-    });
-  </script>
-
-  <script>
-    $(".human-change").click(function(event) {
-      var clickedSrc = event.target.src;
-      // var clickedSrc = $(".human-change").attr("src");
-      $(".human-image").attr("src", clickedSrc);
-    });
-  </script>
-
-  <script type="text/javascript">
-    $(function() {
-      $('#cd-dropdown').dropdown({
-        gutter: 5
-      });
-    });
-  </script>
-
-  <script>
-    (function(window) {
-
-      'use strict';
-
-      // class helper functions from bonzo https://github.com/ded/bonzo
-
-      function classReg(className) {
-        return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
-      }
-
-      // classList support for class management
-      // altho to be fair, the api sucks because it won't accept multiple classes at once
-      var hasClass, addClass, removeClass;
-
-      if ('body' in document.documentElement) {
-        console.log(document.documentElement);
-        hasClass = function(elem, c) {
-          return elem.body.contains(c);
-        };
-        addClass = function(elem, c) {
-          elem.body.add(c);
-        };
-        removeClass = function(elem, c) {
-          elem.body.remove(c);
-        };
-      } else {
-        hasClass = function(elem, c) {
-          return classReg(c).test(elem.className);
-        };
-        addClass = function(elem, c) {
-          if (!hasClass(elem, c)) {
-            elem.className = elem.className + ' ' + c;
-          }
-        };
-        removeClass = function(elem, c) {
-          elem.className = elem.className.replace(classReg(c), ' ');
-        };
-      }
-
-      function toggleClass(elem, c) {
-        var fn = hasClass(elem, c) ? removeClass : addClass;
-        fn(elem, c);
-      }
-
-      var classie = {
-        // full names
-        hasClass: hasClass,
-        addClass: addClass,
-        removeClass: removeClass,
-        toggleClass: toggleClass,
-        // short names
-        has: hasClass,
-        add: addClass,
-        remove: removeClass,
-        toggle: toggleClass
-      };
-
-      // transport
-      if (typeof define === 'function' && define.amd) {
-        // AMD
-        define(classie);
-      } else {
-        // browser global
-        window.classie = classie;
-      }
-
-    })(window);
-  </script>
-
-  <script>
-    (function() {
-      var container = document.querySelector('div.container'),
-        triggerBttn = document.getElementById('about'),
-        overlay = document.querySelector('div.overlay'),
-        closeBttn = overlay.querySelector('button.overlay-close');
-      transEndEventNames = {
-        'WebkitTransition': 'webkitTransitionEnd',
-        'MozTransition': 'transitionend',
-        'OTransition': 'oTransitionEnd',
-        'msTransition': 'MSTransitionEnd',
-        'transition': 'transitionend'
-      };
-
-      function toggleOverlay() {
-        if (classie.has(overlay, 'open')) {
-          classie.remove(overlay, 'open');
-          classie.remove(container, 'overlay-open');
-          classie.add(overlay, 'close');
-          var onEndTransitionFn = function(ev) {
-            if (support.transitions) {
-              if (ev.propertyName !== 'visibility') return;
-              this.removeEventListener(transEndEventName, onEndTransitionFn);
-            }
-            classie.remove(overlay, 'close');
-          };
-          if (support.transitions) {
-            overlay.addEventListener(transEndEventName, onEndTransitionFn);
-          } else {
-            onEndTransitionFn();
-          }
-        } else if (!classie.has(overlay, 'close')) {
-          classie.add(overlay, 'open');
-          classie.add(container, 'overlay-open');
-        }
-      }
-
-      triggerBttn.addEventListener('click', toggleOverlay);
-      closeBttn.addEventListener('click', toggleOverlay);
-    })();
-  </script>
 </body>
 
 </html>
