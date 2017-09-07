@@ -105,7 +105,10 @@ textarea {
   display: inline-block;
   max-height: 50px;
   max-width: 50px;
-  border-radius: 30px; }
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.75) !important; }
 
 .bot-icon {
   display: inline-block;
@@ -498,6 +501,9 @@ body {
 
   .cd-dropdown {
     display: none; } }
+@media (max-width: 500px) {
+  .intro-text {
+    padding-top: 50px; } }
 @media (max-width: 400px) {
   .chat-box ul li > div .text {
     margin-left: -25px; }

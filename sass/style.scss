@@ -344,6 +344,13 @@ text-decoration: none;
     display: none;
   }
 }
+@media (max-width: 500px) {
+  .intro-text {
+    padding-top: 50px;
+  }
+}
+
+
 @media (max-width: 400px) {
   .chat-box ul li > div .text {
     margin-left: -25px;
