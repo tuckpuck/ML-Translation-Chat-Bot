@@ -255,9 +255,9 @@ body {
 
 .intro-text {
   padding-top: 85px;
-  font-size: 17px;
-  line-height: 27px;
-  font-family: "Roboto", sans-serif; }
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5; }
 
 /* Overlay style */
 .overlay {
@@ -267,7 +267,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(255, 155, 48, 0.95);
+  background: rgba(140, 199, 232, 0.98);
   overflow: scroll; }
   .overlay .overlay-close {
     width: 60px;
@@ -284,7 +284,8 @@ body {
   font-size: 18px; }
 
 .about-text {
-  margin-top: 170px; }
+  margin-top: 170px;
+  font-weight: bold; }
 
 .horizontal-rule {
   border-top: 1px solid black;
@@ -308,7 +309,7 @@ body {
   color: #333; }
 
 .see-work a:hover {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 /* Effects */
 .container {
@@ -430,6 +431,34 @@ body {
 
   .overlay ul li {
     min-height: 34px; } }
+@media (min-width: 1000px) {
+  .horizontal-rule {
+    margin: 60px 0px; }
+
+  .intro-text {
+    font-size: 20px;
+    margin-top: 20px; }
+
+  .see-work a {
+    font-size: 16px;
+    font-weight: bold; }
+
+  ol.languages {
+    margin-top: 10px !important; }
+
+  ol.languages li {
+    font-size: 19px !important;
+    font-weight: bold; }
+
+  .about-text {
+    line-height: 1.55;
+    margin-top: 120px;
+    font-size: 24px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+  .smaller-font {
+    font-size: 20px;
+    font-weight: bold; } }
 @media (max-width: 1000px) {
   input {
     width: 600px; }

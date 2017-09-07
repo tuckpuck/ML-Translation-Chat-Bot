@@ -139,7 +139,7 @@ $("body").click(function(e) {
     $("#inputtext").val("buenas tardes tengo una reservación into English");
   };
   if(event.target.innerHTML === "Spanish to German"){
-    $("#inputtext").val("translate buenos dias como estas into German");
+    $("#inputtext").val("translate buenas noches into German");
   };
 });
 
