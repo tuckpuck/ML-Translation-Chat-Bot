@@ -78,6 +78,14 @@ body {
 .about-text{
   margin-top: 170px;
   font-weight: bold;
+  text-align: left !important;
+  line-height: 1.6;
+  list-style-type: none;
+  list-style: none;
+}
+
+.about-text li {
+  margin: 10px 0px;
 }
 
 .horizontal-rule {
@@ -164,7 +172,6 @@ text-decoration: underline;
 .icon-box {
   border: $outline-border;
   background-color: #fff;
-  // padding: 0px 120px;
   border-radius: 3px;
   font-size: 15px;
   @include shadow;
@@ -250,8 +257,12 @@ text-decoration: underline;
   }
 }
 @media (min-width: 1000px) {
+  .see-work {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
   .horizontal-rule {
-    margin: 60px 0px;
+    margin: 40px 0px;
 }
   .intro-text {
     font-size: 20px;
