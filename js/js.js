@@ -1,3 +1,31 @@
+$( document ).ready(function() {
+  sendWakeUp("translate good morning webhook wake up into spanish");
+});
+
+function sendWakeUp(text) {
+  var accessToken = config.CLIENT_ACCESS_TOKEN;
+  var baseUrl = "https://api.api.ai/v1/";
+  $.ajax({
+    type: "POST",
+    url: baseUrl + "query?v=20150910",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    headers: {
+      "Authorization": "Bearer " + accessToken
+    },
+    data: JSON.stringify({
+      query: text,
+      lang: "en",
+      sessionId: "tuckpuck"
+    }),
+    success: function(data) {
+      // console.log("Webhook awake");
+    },
+    error: function(error) {
+      console.log(error);
+    }
+  });
+}
 
 // Hide all icons on page load, toggle on button click
   $(".icon-container").hide();
