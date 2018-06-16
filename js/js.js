@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  sendWakeUp("translate good morning webhook wake up into spanish");
+  sendWakeUp("translate good morning webhook into spanish");
 });
 
 function sendWakeUp(text) {
@@ -19,7 +19,8 @@ function sendWakeUp(text) {
       sessionId: "tuckpuck"
     }),
     success: function(data) {
-      // console.log("Webhook awake");
+      console.log("Webhook pinged");
+      console.log(data);
     },
     error: function(error) {
       console.log(error);
