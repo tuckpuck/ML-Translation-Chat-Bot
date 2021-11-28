@@ -4,5 +4,7 @@ Translation Chatbot uses Natural Language Processing (API.ai) and Google Transla
 The translation chatbot is envisioned as a way to make translations more user-friendly by adding the ability to communicate in full sentences and adding small talk capabilities. Technologies of note used in the project are API.ai, Google Cloud Functions, and SASS. 
 
 # Links
-Wireframe: https://www.dropbox.com/s/5bg0fei2e2i5gh3/botwireframe.png?dl=0
+Demo: translation-chatbot.surge.sh/
+
+NOTE: This project doesn't work anymore since Google updated their DialogFlow API to Version 2. 
 
